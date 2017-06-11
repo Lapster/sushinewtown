@@ -541,6 +541,24 @@ function twentyseventeen_front_page_template( $template ) {
 add_filter( 'frontpage_template',  'twentyseventeen_front_page_template' );
 
 /**
+ *
+ *
+ */
+function custom_sushinewtown_scripts() {
+
+$screen = get_current_screen();
+
+if( 'edit-shop_order' == $screen->id ) {
+
+wp_register_script( 'custom-sushinewtown', get_template_directory_uri() . '/assets/js/sushinewtown.js' );
+wp_enqueue_script( 'custom-sushinewtown' );
+
+} // end if
+
+} // end custom_register_admin_scripts
+add_action( 'admin_enqueue_scripts', 'custom_sushinewtown_scripts' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_parent_theme_file_path( '/inc/custom-header.php' );
