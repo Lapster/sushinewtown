@@ -1,0 +1,168 @@
+/*
+Theme Name: Sushi Newtown
+*/
+
+html, body{
+	height:100%;
+}
+
+body{
+	background: #000 url("img/background-fish.png") repeat-y center;
+	color: #FFF;
+}
+
+h1, h2, h3, h4, h5, h6{
+	color:#b59c63;
+}
+
+h4{
+	color:#FFF;
+	text-transform:uppercase;
+	font-size:14px;
+}
+
+.container {
+	border:1px solid rgba(176,152,97,0.5);
+	margin-top:130px;
+}
+
+.header{
+	text-align: center;
+	margin-top:-20px;
+}
+
+.menu {
+	float:left;
+}
+
+.nav {
+	float:right;
+}
+
+.product{
+	display:inline-block;
+	margin-right: 20px;
+	max-width:200px;
+	vertical-align: top;
+}
+
+.product-section{
+	margin-left: 40px;
+}
+
+.product-slider-container{
+	position: relative;
+}
+
+.left-controls{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	width:30px;
+	z-index: 5;
+}
+
+.left-controls:hover,
+.right-controls:hover{
+	background:rgba(181,156,99,0.2);
+}
+
+.left-controls b.fa{
+	position: absolute;
+	font-size: 2em;
+	left: 10%;
+	top: 50%;
+}
+
+.right-controls{
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	width:30px;
+	z-index:5;
+}
+
+.right-controls b.fa{
+	position: absolute;
+	font-size: 2em;
+	right: 10%;
+	top: 50%;
+}
+
+.product-description-container{
+	position:relative;
+	margin-bottom:10px;
+}
+
+.product-description-overlay{
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+}
+
+.product-description-container .product-description{
+	position: absolute;
+	bottom:0;
+	left:0;
+	padding:5px;
+}
+
+.order-button{
+	border: 2px solid #b59c63;
+	padding:3px;
+}
+
+.order-button a{
+	color:#b59c63;
+}
+
+.menu ul li{
+	display:inline-block;
+	margin:5px;
+}
+
+.nav ul li{
+	display:inline-block;
+	margin:5px;
+}
+
+.header img.logo{
+	margin-top:-80px;
+}
+
+.product img.product-picture{
+	width:200px;
+	height:200px;
+	margin-bottom:10px;
+}
+
+img.woocommerce-placeholder.wp-post-image{
+	max-width: 200px;
+	max-height: 200px;
+}
+
+/********************
+
+TO DELETE - JUST IN AS A REFERENCE
+
+*********************/
+
+
+.product img.product-picture{
+	border:1px solid yellow;
+}
+
+
+/*******************
+Netflix Style
+*******************/
+#wrapper {
+    max - width: 100 % ;
+    padding: 50 px 75 px 50 px 45 px;
+    overflow-x:scroll;
+    overflow: hidden;
+}
