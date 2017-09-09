@@ -14,7 +14,8 @@ function woocommerce_support() {
 
 
 function woo_custom_cart_button_text() {
-	return __( 'Commander / Order', 'woocommerce' );
+	return __( 'Order', 'woocommerce' );
+
 }
 add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_cart_button_text' );    // < 2.1
 
@@ -41,5 +42,21 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	return $fragments;
 	
 }
+
+
+// Change the product thumbnail placeholder image
+function product_placeholder_thumbnail() {
+  add_filter('woocommerce_placeholder_img_src', 'custom_woocommerce_placeholder_img_src');
+   
+	function custom_woocommerce_placeholder_img_src( $src ) {
+	//$upload_dir = wp_upload_dir();
+	//$uploads = untrailingslashit( $upload_dir['baseurl'] );
+	//$src = $uploads . '/2012/07/thumb1.jpg';
+	 
+		$src = get_stylesheet_directory_URI() . '/img/placeholder.jpg'; 
+	return $src;
+	}
+}
+add_action( 'init', 'product_placeholder_thumbnail' );
 
 ?>

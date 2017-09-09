@@ -15,10 +15,27 @@ h1, h2, h3, h4, h5, h6{
 	color:#b59c63;
 }
 
+h2{
+	margin-left:40px;
+}
+
 h4{
 	color:#FFF;
 	text-transform:uppercase;
 	font-size:14px;
+}
+
+.category h2{
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+h2.woocommerce-loop-product__title{
+	color:#FFF;
+	font-size: 1em;
+	margin-left:0px;
+	text-transform: uppercase;
+	font-weight: normal;
 }
 
 .container {
@@ -42,7 +59,6 @@ h4{
 .product{
 	display:inline-block;
 	margin-right: 20px;
-	max-width:200px;
 	vertical-align: top;
 }
 
@@ -73,6 +89,7 @@ h4{
 	font-size: 2em;
 	left: 10%;
 	top: 50%;
+	color:#b59c63;
 }
 
 .right-controls{
@@ -89,6 +106,7 @@ h4{
 	font-size: 2em;
 	right: 10%;
 	top: 50%;
+	color:#b59c63;
 }
 
 .product-description-container{
@@ -97,6 +115,7 @@ h4{
 }
 
 .product-description-overlay{
+	background:rgba(0,0,0,0.25);
 	position: absolute;
 	top:0;
 	bottom:0;
@@ -104,11 +123,40 @@ h4{
 	right:0;
 }
 
+.header .nav a{
+	color:#b59c63;
+}
+
+a.woocommerce-LoopProduct-link{
+	color:#FFF;
+}
+
 .product-description-container .product-description{
 	position: absolute;
 	bottom:0;
 	left:0;
+	padding:10px;
+	color:#FFF;
+	max-width: 200px;
+}
+
+.product-slider-container .product-section a.add_to_cart_button {
+	color:#b59c63;
+	border:1px solid #b59c63;
 	padding:5px;
+}
+
+.product-slider-container .product-section #content li.product{
+	max-width: 200px;
+}
+
+.product-slider-container .product-section span.woocommerce-Price-amount.amount{
+	color:#FFF;
+}
+
+.product-slider-container .product-section a.add_to_cart_button:hover {
+	background:rgba(181,156,99,0.25);
+	text-decoration: none;
 }
 
 .order-button{
