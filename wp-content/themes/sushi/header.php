@@ -14,16 +14,22 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_URI() . '/css/reset.css' ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_URI() . '/css/bootstrap.css' ?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_URI() . '/style.css' ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_URI() . '/css/font-awesome.min.css' ?>">
-
+	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_URI() . '/css/jquery.mCustomScrollbar.min.css' ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_URI() . '/style.css' ?>">
 	 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
+<div class="text-center">
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<img class="logo" src="<?php echo get_stylesheet_directory_URI() . '/img/logo.png' ?>" width="240px" height="220px" />
+	</a>
+</div>
 <div class="container">
 	<div class="header">
+
 		<div class="menu">
 			<ul>
 				<li>
@@ -43,8 +49,6 @@
 				</li>
 			</ul>
 		</div>
-
-		<img class="logo" src="<?php echo get_stylesheet_directory_URI() . '/img/logo.png' ?>" width="240px" height="220px" />
 
 		<div class="nav">
 			<ul>

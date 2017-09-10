@@ -5,19 +5,14 @@ $cats = get_terms('product_cat');
 foreach ( $cats as $cat ) :
 	$products = get_posts( array(
 		'post_type'   => 'product',
-		'product_cat'   => $cat->name,
+		'product_cat'   => $cat->slug,
 		'posts_per_page' => -1,
 	) );
  ?>
 	
 	<div class="category">
+	
 		<h2><?php echo $cat->name; ?></h2>
-		<div class="product-slider-container">
-		
-			<div id="wrapper">
-				<span id="controlL" class="left-controls" role="button" aria-label="See Previous Modules">
-					<b class="fa fa-chevron-left fa-chevron-left-extra" aria-hidden="true"></b>
-				</span>
 					
 				<div class="product-section">
 					<ul id="content">
@@ -30,11 +25,6 @@ foreach ( $cats as $cat ) :
 					</ul>
 				</div><!--end of product-section-->
 
-				<span id="controlR" class="right-controls" role="button" aria-label="See Previous Modules">
-					<b class="fa fa-chevron-right fa-chevron-right-extra" aria-hidden="true"></b>
-				</span>
-			</div><!-- wrapper -->			
-		</div><!-- product-slider-container -->
 	</div><!-- category -->
 
 <?php endforeach; ?>
@@ -43,16 +33,26 @@ foreach ( $cats as $cat ) :
 	$=jQuery;
 	$( document ).ready(function() {
 	    console.log( "ready!" );
-	    productContainerResize();
+	   // productContainerResize();
+	  
 
 	});	
 
+	(function($){
+	  $(window).on("load",function(){
+	    $(".product-section").mCustomScrollbar({
+	      axis:"x",
+	      theme:"sushi"
+	    });
+	  });
+	})(jQuery);
+
+
 	//Resize the product container based on the number of products
-	function productContainerResize(){
+	/*function productContainerResize(){
 		$('.product-section').each(function(){
 			productContainerSize = 0;
 			$(this).find('#content .product').each(function(){
-				console.log('#content .product');
 				safety = 5;
 				productMarginLeft = parseInt( $(this).css('margin-left') );
 				productPaddingLeft = parseInt( $(this).css('padding-left') );
@@ -65,13 +65,13 @@ foreach ( $cats as $cat ) :
 				productContainerSize += productTrueWidth;
 			});
 			$(this).css('width', productContainerSize);
-			console.log('productContainerSize='+productContainerSize);
 		});
+
+
 	}
 
 	//Scroll right on products
 	$('.right-controls').click(function(){
-		console.log('')
 		productMarginLeft = Math.abs(parseInt( $(this).closest('#wrapper').find('#content').css('margin-left') ));
 		contentWidth = $(this).closest('#wrapper').find('.product-section').width();
 		wrapperWidth =  $(this).closest('#wrapper').width();
@@ -82,8 +82,7 @@ foreach ( $cats as $cat ) :
 		//Prevent going too far right
 			if(productMarginLeft <= (wrapperWidth - productMarginLeft)){
 				marginLeftFarthestRight = contentWidth - wrapperWidth;
-				marginLeftFarthestRight = '-' + marginLeftFarthestRight + 'px'
-				console.log('marginLeftFarthestRight='+marginLeftFarthestRight)
+				marginLeftFarthestRight = '-' + marginLeftFarthestRight + 'px';
 				targetHTML.animate({
 					marginLeft: "-=400px"
 				}, "fast");
@@ -102,7 +101,6 @@ foreach ( $cats as $cat ) :
 		if(contentWidth > wrapperWidth){
 			//Prevent going too far left
 			if(productMarginLeft >= 0){
-				console.log('left resset')
 				targetHTML.animate({
 					marginLeft: "0px"
 				}, "fast");
@@ -112,6 +110,6 @@ foreach ( $cats as $cat ) :
 				}, "fast");
 			}
 		}
-	 });
+	 });*/
 </script>
 <?php get_footer();

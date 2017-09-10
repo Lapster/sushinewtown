@@ -25,6 +25,19 @@ h4{
 	font-size:14px;
 }
 
+a{
+	color:#b59c63;
+}
+
+a:hover{
+	color:#8e7640;
+}
+
+a:focus{
+	color: #8e7640;
+	outline: none;
+}
+
 .category h2{
 	text-transform: uppercase;
 	font-weight: normal;
@@ -40,12 +53,13 @@ h2.woocommerce-loop-product__title{
 
 .container {
 	border:1px solid rgba(176,152,97,0.5);
-	margin-top:130px;
+	margin-top:50px;
 }
 
 .header{
 	text-align: center;
 	margin-top:-20px;
+	overflow: hidden;
 }
 
 .menu {
@@ -64,49 +78,6 @@ h2.woocommerce-loop-product__title{
 
 .product-section{
 	margin-left: 40px;
-}
-
-.product-slider-container{
-	position: relative;
-}
-
-.left-controls{
-	position:absolute;
-	top:0;
-	bottom:0;
-	left:0;
-	width:30px;
-	z-index: 5;
-}
-
-.left-controls:hover,
-.right-controls:hover{
-	background:rgba(181,156,99,0.2);
-}
-
-.left-controls b.fa{
-	position: absolute;
-	font-size: 2em;
-	left: 10%;
-	top: 50%;
-	color:#b59c63;
-}
-
-.right-controls{
-	position:absolute;
-	top:0;
-	bottom:0;
-	right:0;
-	width:30px;
-	z-index:5;
-}
-
-.right-controls b.fa{
-	position: absolute;
-	font-size: 2em;
-	right: 10%;
-	top: 50%;
-	color:#b59c63;
 }
 
 .product-description-container{
@@ -140,28 +111,39 @@ a.woocommerce-LoopProduct-link{
 	max-width: 200px;
 }
 
-.product-slider-container .product-section a.add_to_cart_button {
+.product-section a.add_to_cart_button, 
+.product-section a.added_to_cart.wc-forward {
 	color:#b59c63;
 	border:1px solid #b59c63;
 	padding:5px;
+	text-transform: uppercase;
+	display: block;
+	text-align: center;
 }
 
-.product-slider-container .product-section #content li.product{
-	max-width: 200px;
-}
-
-.product-slider-container .product-section span.woocommerce-Price-amount.amount{
-	color:#FFF;
-}
-
-.product-slider-container .product-section a.add_to_cart_button:hover {
+.product-section a.add_to_cart_button:hover,
+.product-section a.added_to_cart.wc-forward:hover {
 	background:rgba(181,156,99,0.25);
 	text-decoration: none;
 }
 
+.product-section #content li.product{
+	max-width: 200px;
+}
+
+.product-section span.woocommerce-Price-amount.amount{
+	color:#FFF;
+}
+
+
+
 .order-button{
 	border: 2px solid #b59c63;
 	padding:3px;
+}
+
+.category{
+	margin-top:20px;
 }
 
 .order-button a{
@@ -178,8 +160,8 @@ a.woocommerce-LoopProduct-link{
 	margin:5px;
 }
 
-.header img.logo{
-	margin-top:-80px;
+img.logo{
+	margin-top: 50px;
 }
 
 .product img.product-picture{
@@ -193,24 +175,76 @@ img.woocommerce-placeholder.wp-post-image{
 	max-height: 200px;
 }
 
+.text-center{
+	text-align: center;
+}
+
 /********************
 
-TO DELETE - JUST IN AS A REFERENCE
+WOOCOMMERCE OVERWRITTE
+
+*********************/
+.container .woocommerce-message{
+	background: none;
+	color:#FFF;
+}
+
+.container .woocommerce #respond input#submit, 
+.container .woocommerce a.button, 
+.container .woocommerce button.button, 
+.container .woocommerce input.button{
+	color: #b59c63;
+	background: none;
+	border: 1px solid #b59c63;
+}
+
+.container .woocommerce #respond input#submit, 
+.container .woocommerce a.button:hover, 
+.container .woocommerce button.button, 
+.container .woocommerce input.button:hover{
+	background: rgba(181,156,99,0.25);
+	color:#8e7640;
+}
+
+
+.container .woocommerce #respond input#submit.alt, 
+.container .woocommerce a.button.alt, 
+.container .woocommerce button.button.alt, 
+.container .woocommerce input.button.alt{
+	color: #b59c63;
+	background: none;
+	border: 1px solid #b59c63;
+}
+
+.container .woocommerce #respond input#submit.alt:hover, 
+.container .woocommerce a.button.alt:hover, 
+.container .woocommerce button.button.alt:hover, 
+.container .woocommerce input.button.alt:hover{
+	background: rgba(181,156,99,0.25);
+	color:#8e7640;
+}
+
+
+
+/********************
+
+PRODUCT SCROLLBAR
 
 *********************/
 
-
-.product img.product-picture{
-	border:1px solid yellow;
+.mCS-sushi.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ 
+	background-color: #b59c63; 
 }
 
-
-/*******************
-Netflix Style
-*******************/
-#wrapper {
-    max - width: 100 % ;
-    padding: 50 px 75 px 50 px 45 px;
-    overflow-x:scroll;
-    overflow: hidden;
+.mCS-sushi.mCSB_scrollTools .mCSB_draggerRail{ 
+	background-color: #FFF; 
 }
+
+.product-section{
+		overflow-x: auto;
+  		white-space: nowrap;
+	}
+
+	span.product-description{
+		white-space: normal;
+	}

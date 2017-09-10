@@ -59,4 +59,11 @@ function product_placeholder_thumbnail() {
 }
 add_action( 'init', 'product_placeholder_thumbnail' );
 
+
+
+function my_theme_scripts() {
+    wp_enqueue_script( 'tinyScrollbar', get_stylesheet_directory_URI() . '/js/jquery.mCustomScrollbar.min.js', array( 'jquery' ), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
+
 ?>
