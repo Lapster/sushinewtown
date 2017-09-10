@@ -77,10 +77,6 @@ h2.woocommerce-loop-product__title{
 	vertical-align: top;
 }
 
-.product-section{
-	margin-left: 40px;
-}
-
 .product-description-container{
 	position:relative;
 	margin-bottom:10px;
@@ -225,6 +221,11 @@ WOOCOMMERCE OVERWRITTE
 	color:#8e7640;
 }
 
+.container #add_payment_method #payment, 
+.container .woocommerce-cart #payment, 
+.container .woocommerce-checkout #payment{
+	background: none;
+}
 
 
 /********************
@@ -249,3 +250,25 @@ PRODUCT SCROLLBAR
 	span.product-description{
 		white-space: normal;
 	}
+
+
+/*******
+
+LAP
+
+
+*******/
+
+/** Footer **/
+.footer {
+	margin: 20px;
+}
+
+.footer_information {
+	text-align: right;
+}
+
+/** login page **/
+.login_float_left {
+	float: left;
+}
