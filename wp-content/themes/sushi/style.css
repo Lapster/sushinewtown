@@ -349,3 +349,7 @@ LAP
 .login_float_left {
 	float: left;
 }
+
+#billing_email_field {
+    float: left;
+}
