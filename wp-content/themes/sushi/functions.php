@@ -63,8 +63,11 @@ add_action( 'init', 'product_placeholder_thumbnail' );
 
 function my_theme_scripts() {
     wp_enqueue_script( 'mCustomScrollbar', get_stylesheet_directory_URI() . '/js/jquery.mCustomScrollbar.min.js', array( 'jquery' ), '1.0.0', true );
-    
+
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
+
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 ?>
