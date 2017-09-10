@@ -33,7 +33,7 @@
 		<div class="menu">
 			<ul>
 				<li>
-					<a href="#">
+					<a href="#footer-information">
 						<img src="<?php echo get_stylesheet_directory_URI() . '/img/icon-contact.png' ?>" width="29px" height="20px"/>
 					</a>
 				</li>

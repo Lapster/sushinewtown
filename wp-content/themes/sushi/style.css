@@ -176,6 +176,39 @@ img.woocommerce-placeholder.wp-post-image{
 	text-align: center;
 }
 
+.container.footerFix{
+	border:none;
+}
+
+/** Footer **/
+.footer {
+	margin: 20px;
+}
+
+.footer-information {
+	text-align: right;
+	float:right;
+}
+
+/** login page **/
+.login_float_left {
+	float: left;
+}
+
+.footer p{
+	text-transform: uppercase;
+	margin:0;
+}
+
+#billing_email_field {
+    float: left;
+}
+
+.footer-information .social-links li{
+	display: inline-block;
+	margin-left: 10px;
+}
+
 /********************
 
 WOOCOMMERCE OVERWRITTE
@@ -327,29 +360,3 @@ PRODUCT SCROLLBAR
 	span.product-description{
 		white-space: normal;
 	}
-
-
-/*******
-
-LAP
-
-
-*******/
-
-/** Footer **/
-.footer {
-	margin: 20px;
-}
-
-.footer_information {
-	text-align: right;
-}
-
-/** login page **/
-.login_float_left {
-	float: left;
-}
-
-#billing_email_field {
-    float: left;
-}
