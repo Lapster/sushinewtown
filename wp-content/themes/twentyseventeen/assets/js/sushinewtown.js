@@ -10,5 +10,5 @@ jQuery(document).ready(function( $ ) {
 function page_autoreload(){
 	setTimeout(function(){
 		location.reload();
-	}, 5000);
+	}, 30000);
 }

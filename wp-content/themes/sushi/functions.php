@@ -69,6 +69,19 @@ add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
+function custom_sushinewtown_scripts() {
+
+$screen = get_current_screen();
+
+if( 'edit-shop_order' == $screen->id ) {
+
+wp_register_script( 'custom-sushinewtown', get_template_directory_uri() . '/js/sushinewtown.js' );
+wp_enqueue_script( 'custom-sushinewtown' );
+
+} // end if
+
+} // end custom_register_admin_scripts
+add_action( 'admin_enqueue_scripts', 'custom_sushinewtown_scripts' );
 
 /**
  * Plugin Name: WooCommerce Remove Billing Fields for Free Virtual Products

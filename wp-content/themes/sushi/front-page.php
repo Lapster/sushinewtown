@@ -7,7 +7,10 @@ foreach ( $cats as $cat ) :
 		'post_type'   => 'product',
 		'product_cat'   => $cat->slug,
 		'posts_per_page' => -1,
+		'orderby' => 'menu_order',
+		'order' => 'ASC'
 	) );
+#var_dump($products);
  ?>
 	
 	<div class="category">

@@ -12,8 +12,8 @@ Easily and safely add your custom functions (PHP code) directly out of your Word
 
 
 == Description ==
-An easy to use, with intuitive interface WordPress plugin that gives you the ability to easily and safely add your custom functions (PHP code) for execution in WordPress environment directly out of your WordPress Admin area and without any need of an external editor. It's purpose is to provide a familiar experience to WordPress users. No need anymore editing the functions.php file of your theme. Just add your PHP code in the field on the plugin settings page and this plugin will do the rest for you.This is a simple and perfect tool to use as your site's functionality plugin.
-It's really useful in case of any theme update, because your custom PHP code would never be overwritten. Your custom PHP code will keep on working, no matter how many times you upgrade or switch your theme.On the plugin settings page you find the PHP editor powered by CodeMirror. It have syntax highlighting and line numbering options. Also this editor support a tab indentation. If you want more options then tell me and I will be happy to add it.
+An easy to use, with intuitive interface WordPress plugin that gives you the ability to easily and safely add your custom functions (PHP code) for execution in WordPress environment directly out of your WordPress Admin area and without any need of an external editor. It's purpose is to provide a familiar experience to WordPress users. No need anymore editing the functions.php file of your theme. Just add your PHP code in the field on the plugin settings page and this plugin will do the rest for you.This is a simple and perfect tool to use as your site's functionality plugin.
+It's really useful in case of any theme update, because your custom PHP code would never be overwritten. Your custom PHP code will keep on working, no matter how many times you upgrade or switch your theme.On the plugin settings page you find the PHP editor powered by CodeMirror. It have syntax highlighting and line numbering options. Also this editor support a tab indentation. If you want more options then tell me and I will be happy to add it.
 
 = Features =
 
@@ -36,7 +36,7 @@ An easy to use, with intuitive interface WordPress plugin that gives you the abi
 * Editor allow for tab indentation
 * And much, much more!
 
-**Coming soon:**
+**Coming soon:**
 * Reload the settings page at same position after pushing the save button
 * Multisite network support
 
@@ -50,8 +50,8 @@ An easy to use, with intuitive interface WordPress plugin that gives you the abi
 
 If you would like to add a translation to this plugin then please head to our [Translating WordPress](https://translate.wordpress.org/projects/wp-plugins/my-custom-functions) page.
 
-**Consider Going Pro For Additional Features!**>**Pro Features**>
-> All features from Free version included plus:>* Unlimited number of functions>* Automatic backup of all functions to a file>* Toggle for temporary disable the certain functions>* Button for collapse/expand the field with code>* Sidebar items can be collapsed or expanded>* Well documented>>[Get the PRO version now!](https://www.arthurgareginyan.com/plugin-my-custom-functions-pro.html)
+**Consider Going Pro For Additional Features!**>**Pro Features**>
+> All features from Free version included plus:>* Unlimited number of functions>* Automatic backup of all functions to a file>* Toggle for temporary disable the certain functions>* Button for collapse/expand the field with code>* Sidebar items can be collapsed or expanded>* Well documented>>[Get the PRO version now!](https://www.arthurgareginyan.com/plugin-my-custom-functions-pro.html)
 
 
 == Installation ==
@@ -262,7 +262,7 @@ Commercial licensing (e.g. for projects that can’t use an open-source license)
 * Style sheet of settings page improved and better commented.
 * JS code improved.
 * The "thanks.png" image removed.
-* POT file updated.* Russian translation updated.* Chinese (Taiwan) translation updated.
+* POT file updated.* Russian translation updated.* Chinese (Taiwan) translation updated.
 
 = 2.5.1 =
 * The update_option() returned into _duplicates function.
