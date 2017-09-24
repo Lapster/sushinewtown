@@ -51,10 +51,12 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	
 	?>
 
+		<!--
 		<div class="product-description-overlay">
 			<span class="product-description"><?php echo get_post($item['product_id'])->post_content; ?> </span>
 
 		</div>
+		-->
 	</div><!--product-description-container-->
 	<?php
 	/**

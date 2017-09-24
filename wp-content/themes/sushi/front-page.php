@@ -12,7 +12,10 @@ foreach ( $cats as $cat ) :
 	
 	<div class="category">
 	
-		<h2><?php echo $cat->name; ?></h2>
+		<h2>
+		
+			<a href="<?php echo get_category_link( $cat->term_id ); ?>"><?php echo $cat->name; ?></a>
+		</h2>
 					
 				<div class="product-section">
 					<ul id="content">

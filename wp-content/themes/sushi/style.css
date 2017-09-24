@@ -338,6 +338,17 @@ span.woocommerce-Price-amount.amount{
 	color:#FFF;
 }
 
+li#tab-title-description{
+	margin-right:0px;
+}
+
+input#byconsolewooodt_delivery_type_levering,
+input#byconsolewooodt_delivery_type_levering + label,
+input#byconsolewooodt_delivery_type_take_away,
+input#byconsolewooodt_delivery_type_take_away + label{
+	display: none;
+}
+
 /********************
 
 PRODUCT SCROLLBAR

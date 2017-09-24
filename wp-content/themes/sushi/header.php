@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_URI() . '/css/font-awesome.min.css' ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_URI() . '/css/jquery.mCustomScrollbar.min.css' ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_URI() . '/style.css' ?>">
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 	 <?php wp_head(); ?>
 </head>
 
@@ -32,6 +33,11 @@
 
 		<div class="menu">
 			<ul>
+				<li>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<img src="<?php echo get_stylesheet_directory_URI() . '/img/icon-home.png' ?>"/>
+					</a>
+				</li>
 				<li>
 					<a href="#footer-information">
 						<img src="<?php echo get_stylesheet_directory_URI() . '/img/icon-contact.png' ?>" width="29px" height="20px"/>
@@ -53,16 +59,29 @@
 		<div class="nav">
 			<ul>
 				<li>
+				<?php 
+					if( is_user_logged_in() )
+					{
+				?>
+
+					<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="My Account?>">My Account</a>
+
+				<?php 
+
+					} else {
+
+				?>
 					<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="Login?>">Login</a>
+
+				<?php 
+					} 
+				?>
+				
 				</li>
 				<li>
-					<!--<a href="#">
-						<img src="<?php echo get_stylesheet_directory_URI() . '/img/icon-cart.png' ?>" width="20px" height="26px"/>
-					</a>-->
 					<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total(); ?>
-					<img src="<?php echo get_stylesheet_directory_URI() . '/img/icon-cart.png' ?>" width="20px" height="26px"/>
 					</a>
-
+					<img src="<?php echo get_stylesheet_directory_URI() . '/img/icon-cart.png' ?>" width="20" height="17"/>
 				</li>
 			</ul>
 		</div>
